@@ -1,0 +1,15 @@
+{
+  "name": "security-audit",
+  "owner": {
+    "name": "Cole Foster",
+    "url": "https://github.com/colefoster"
+  },
+  "plugins": [
+    {
+      "name": "security-audit",
+      "source": "./plugins/security-audit",
+      "description": "Thorough, parallelized security audit of any codebase. Severity-tagged findings with CWE/OWASP IDs and concrete fixes.",
+      "version": "1.0.0"
+    }
+  ]
+}

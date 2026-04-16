@@ -1,0 +1,11 @@
+{
+  "name": "security-audit",
+  "description": "Thorough, parallelized security audit of any codebase. Severity-tagged findings with CWE/OWASP IDs and concrete fixes.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Cole Foster",
+    "url": "https://github.com/colefoster"
+  },
+  "homepage": "https://github.com/colefoster/claude-security-audit",
+  "license": "MIT"
+}
