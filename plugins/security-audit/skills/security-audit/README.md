@@ -17,22 +17,17 @@ Works on web apps, APIs, CLI tools, libraries, and mobile codebases.
 
 ## Install
 
-Clone into your Claude Code skills directory:
+This skill is distributed via the [`cole-skills`](https://github.com/colefoster/cole-skills) Claude Code plugin marketplace.
 
-```bash
-git clone https://github.com/<your-user>/security-audit ~/.claude/skills/security-audit
 ```
-
-Or symlink from a dotfiles repo:
-
-```bash
-ln -s /path/to/your/dotfiles/security-audit ~/.claude/skills/security-audit
+/plugin marketplace add colefoster/cole-skills
+/plugin install security-audit@cole-skills
 ```
 
 Then in any Claude Code session:
 
 ```
-/security-audit
+/security-audit:security-audit
 ```
 
 …or just ask: *"audit this codebase for security issues"*.

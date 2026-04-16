@@ -1,57 +1,49 @@
-# claude-security-audit
+# cole-skills
 
-A [Claude Code](https://claude.com/claude-code) plugin marketplace containing the **security-audit** skill — a thorough, parallelized security audit for any codebase that produces a severity-tagged punch list of findings.
+A [Claude Code](https://claude.com/claude-code) plugin marketplace by [@colefoster](https://github.com/colefoster).
+
+## Plugins
+
+| Plugin | Description |
+|--------|-------------|
+| [`security-audit`](plugins/security-audit) | Thorough, parallelized security audit of any codebase. Severity-tagged findings with CWE/OWASP IDs and concrete fixes. |
 
 ## Install
 
-Add this marketplace to Claude Code:
+Add the marketplace once:
 
 ```
-/plugin marketplace add colefoster/claude-security-audit
+/plugin marketplace add colefoster/cole-skills
 ```
 
-Then install the plugin:
+Then install whichever plugin you want:
 
 ```
-/plugin install security-audit@security-audit
+/plugin install security-audit@cole-skills
 ```
+
+Updates flow through `/plugin update`.
 
 ## Use
 
-In any Claude Code session:
+Each plugin's skills become available as `/<plugin>:<skill>` in any Claude Code session:
 
 ```
 /security-audit:security-audit
 ```
 
-…or just ask: *"audit this codebase for security issues"*.
-
-## What it does
-
-- **Scope discovery** — detects stack, app type, deployment surface
-- **6 parallel audit agents** covering injection, auth, crypto, dependencies, deployment, DoS
-- **CWE / OWASP-tagged findings** with concrete fixes
-- **Severity model** based on exploitability × impact (CRITICAL → LOW)
-- **Static analyzer integration** — runs `semgrep`, `bandit`, `brakeman`, `gosec`, `gitleaks`, `npm audit`, etc. when available
-- **Skim-optimized output** — action header first, findings grouped by severity
-- **Fix loop** — offers to fix findings CRITICAL → HIGH → MEDIUM → LOW
-- **Safe verification** — non-destructive probes against dev/staging only
-
-Works on web apps, APIs, CLI tools, libraries, and mobile codebases.
-
-See [`plugins/security-audit/skills/security-audit/README.md`](plugins/security-audit/skills/security-audit/README.md) for full coverage details and example output.
+…or just describe the task in natural language: *"audit this codebase for security issues"*.
 
 ## Repo structure
 
 ```
 .claude-plugin/marketplace.json     ← marketplace manifest
 plugins/
-  security-audit/
-    .claude-plugin/plugin.json      ← plugin manifest
+  <plugin-name>/
+    .claude-plugin/plugin.json      ← per-plugin manifest
     skills/
-      security-audit/
+      <skill-name>/
         SKILL.md                    ← the skill itself
-        README.md
 ```
 
 ## License
