@@ -1,0 +1,11 @@
+{
+  "name": "dumb-down",
+  "description": "Re-explain the previous response (or a specified topic) in plainer language — ELI30-but-tired.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Cole Foster",
+    "url": "https://github.com/colefoster"
+  },
+  "homepage": "https://github.com/colefoster/cole-skills",
+  "license": "MIT"
+}

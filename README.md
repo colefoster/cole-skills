@@ -6,7 +6,11 @@ A [Claude Code](https://claude.com/claude-code) plugin marketplace by [@colefost
 
 | Plugin | Description |
 |--------|-------------|
-| [`security-audit`](plugins/security-audit) | Thorough, parallelized security audit of any codebase. Severity-tagged findings with CWE/OWASP IDs and concrete fixes. |
+| [`dumb-down`](plugins/dumb-down) | Re-explain the previous response (or a specified topic) in plainer language — ELI30-but-tired. |
+| [`step-back`](plugins/step-back) | Pause hands-on work and reassess an area from a higher level — ideal architecture vs. accrued friction. |
+| [`three-designs`](plugins/three-designs) | Spawn 3 parallel sub-agents to produce 3 radically different design solutions, each using a distinct mental model. |
+| [`two-claudes`](plugins/two-claudes) | Stress-test a plan by grilling it with codebase access and sending each question to an independent expert agent for fresh perspective. |
+| [`wrap-up`](plugins/wrap-up) | End-of-session wrap-up: save durable knowledge to memory, then commit the session's code changes in clean, scoped commits. |
 
 ## Install
 
@@ -19,7 +23,7 @@ Add the marketplace once:
 Then install whichever plugin you want:
 
 ```
-/plugin install security-audit@cole-skills
+/plugin install wrap-up@cole-skills
 ```
 
 Updates flow through `/plugin update`.
@@ -29,10 +33,10 @@ Updates flow through `/plugin update`.
 Each plugin's skills become available as `/<plugin>:<skill>` in any Claude Code session:
 
 ```
-/security-audit:security-audit
+/wrap-up:wrap-up
 ```
 
-…or just describe the task in natural language: *"audit this codebase for security issues"*.
+…or just describe the task in natural language: *"let's wrap up this session"*.
 
 ## Repo structure
 

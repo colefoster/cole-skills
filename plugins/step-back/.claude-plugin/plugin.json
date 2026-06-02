@@ -1,0 +1,11 @@
+{
+  "name": "step-back",
+  "description": "Pause hands-on work and reassess an area from a higher level — ideal architecture vs. accrued friction.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Cole Foster",
+    "url": "https://github.com/colefoster"
+  },
+  "homepage": "https://github.com/colefoster/cole-skills",
+  "license": "MIT"
+}

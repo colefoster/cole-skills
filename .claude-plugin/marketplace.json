@@ -6,9 +6,33 @@
   },
   "plugins": [
     {
-      "name": "security-audit",
-      "source": "./plugins/security-audit",
-      "description": "Thorough, parallelized security audit of any codebase. Severity-tagged findings with CWE/OWASP IDs and concrete fixes.",
+      "name": "dumb-down",
+      "source": "./plugins/dumb-down",
+      "description": "Re-explain the previous response (or a specified topic) in plainer language — ELI30-but-tired.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "step-back",
+      "source": "./plugins/step-back",
+      "description": "Pause hands-on work and reassess an area from a higher level — ideal architecture vs. accrued friction.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "three-designs",
+      "source": "./plugins/three-designs",
+      "description": "Spawn 3 parallel sub-agents to produce 3 radically different design solutions, each using a distinct mental model.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "two-claudes",
+      "source": "./plugins/two-claudes",
+      "description": "Stress-test a plan by grilling it with codebase access and sending each question to an independent expert agent for fresh perspective.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "wrap-up",
+      "source": "./plugins/wrap-up",
+      "description": "End-of-session wrap-up: save durable knowledge to memory, then commit the session's code changes in clean, scoped commits.",
       "version": "1.0.0"
     }
   ]

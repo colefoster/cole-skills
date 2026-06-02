@@ -1,0 +1,11 @@
+{
+  "name": "wrap-up",
+  "description": "End-of-session wrap-up: save durable knowledge to memory, then commit the session's code changes in clean, scoped commits.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Cole Foster",
+    "url": "https://github.com/colefoster"
+  },
+  "homepage": "https://github.com/colefoster/cole-skills",
+  "license": "MIT"
+}

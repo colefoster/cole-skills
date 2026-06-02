@@ -1,6 +1,6 @@
 {
-  "name": "security-audit",
-  "description": "Thorough, parallelized security audit of any codebase. Severity-tagged findings with CWE/OWASP IDs and concrete fixes.",
+  "name": "three-designs",
+  "description": "Spawn 3 parallel sub-agents to produce 3 radically different design solutions, each using a distinct mental model.",
   "version": "1.0.0",
   "author": {
     "name": "Cole Foster",

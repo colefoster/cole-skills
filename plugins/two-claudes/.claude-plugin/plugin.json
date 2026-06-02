@@ -1,0 +1,11 @@
+{
+  "name": "two-claudes",
+  "description": "Stress-test a plan by grilling it with codebase access and sending each question to an independent expert agent for fresh perspective.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Cole Foster",
+    "url": "https://github.com/colefoster"
+  },
+  "homepage": "https://github.com/colefoster/cole-skills",
+  "license": "MIT"
+}
