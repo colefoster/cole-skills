@@ -7,6 +7,8 @@ A [Claude Code](https://claude.com/claude-code) plugin marketplace by [@colefost
 | Plugin | Description |
 |--------|-------------|
 | [`dumb-down`](plugins/dumb-down) | Re-explain the previous response (or a specified topic) in plainer language — ELI30-but-tired. |
+| [`google-style`](plugins/google-style) | Speak and write in Google developer documentation style for the rest of the session. |
+| [`kaomoji`](plugins/kaomoji) | Express yourself with kaomoji — Japanese-style text emoticons — for the rest of the session. |
 | [`step-back`](plugins/step-back) | Pause hands-on work and reassess an area from a higher level — ideal architecture vs. accrued friction. |
 | [`three-designs`](plugins/three-designs) | Spawn 3 parallel sub-agents to produce 3 radically different design solutions, each using a distinct mental model. |
 | [`two-claudes`](plugins/two-claudes) | Stress-test a plan by grilling it with codebase access and sending each question to an independent expert agent for fresh perspective. |

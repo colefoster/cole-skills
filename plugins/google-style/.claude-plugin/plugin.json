@@ -1,0 +1,11 @@
+{
+  "name": "google-style",
+  "description": "Speak and write in Google developer documentation style for the rest of the session.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Cole Foster",
+    "url": "https://github.com/colefoster"
+  },
+  "homepage": "https://github.com/colefoster/cole-skills",
+  "license": "MIT"
+}

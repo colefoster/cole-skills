@@ -12,6 +12,18 @@
       "version": "1.0.0"
     },
     {
+      "name": "google-style",
+      "source": "./plugins/google-style",
+      "description": "Speak and write in Google developer documentation style for the rest of the session.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "kaomoji",
+      "source": "./plugins/kaomoji",
+      "description": "Express yourself with kaomoji — Japanese-style text emoticons — for the rest of the session.",
+      "version": "1.0.0"
+    },
+    {
       "name": "step-back",
       "source": "./plugins/step-back",
       "description": "Pause hands-on work and reassess an area from a higher level — ideal architecture vs. accrued friction.",
