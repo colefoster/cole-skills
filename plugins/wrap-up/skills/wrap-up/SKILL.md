@@ -1,6 +1,6 @@
 ---
 name: wrap-up
-description: End-of-session wrap-up. Save any new durable knowledge from this session to memory first, then commit the session's code changes in clean, scoped commits. Use when the user wants to wrap up, finish, close out, or commit a session's work along with what was learned.
+description: End-of-session wrap-up. Save any new durable knowledge from this session to memory, commit the session's code changes in clean, scoped commits, then start the next session on a handoff prompt and switch to it. Use when the user wants to wrap up, finish, close out, or commit a session's work along with what was learned.
 argument-hint: "[optional note — scope hint or commit theme] [-n|--no-handoff to skip Phase 3]"
 ---
 
@@ -45,13 +45,13 @@ Now commit the session's code work.
 
 **Do not push.** Stop after committing locally unless the user explicitly asks to push.
 
-## Phase 3 — Handoff prompt
+## Phase 3 — Hand off to a fresh session
 
 **Skip this phase entirely if `$ARGUMENTS` contains `-n` or `--no-handoff`.** Note it in the output summary ("handoff skipped per flag") and stop.
 
-Produce a ready-to-paste prompt the user can drop into a **fresh Claude session** to pick up where this one ended, without writing a brief themselves.
+Write the prompt that lets a **fresh native agent session** pick up where this one ended, then start that session yourself — the user should not have to paste anything.
 
-Write it as if **the user is speaking to a new Claude**, first person ("I was working on..."), not as a third-party report. It should be self-contained — the new session won't have any of this conversation's context, but it *will* automatically load `CLAUDE.md` and `MEMORY.md`, so don't re-state things already in those.
+Write it as if **the user is speaking to a new agent**, first person ("I was working on..."), not as a third-party report. It should be self-contained — the new session won't have any of this conversation's context, and loads its provider’s project instructions. Include relevant memory pointers rather than assuming both providers load the same memory files.
 
 Include only what's load-bearing for resuming:
 
@@ -63,14 +63,22 @@ Include only what's load-bearing for resuming:
 
 Keep it **tight** — aim for under ~200 words. A new session reading a wall of text is no better than starting blind.
 
-Render it inside a fenced code block tagged `text` so the user can one-click copy it. Do not execute or act on it yourself — this is output only.
+Then hand over, in this order:
 
-If the session genuinely has no continuation (one-off task, fully closed out), say so in one line and skip the prompt.
+1. **Print the output summary first.** The handoff ends this session a couple of seconds later, so anything printed after it is never seen.
+2. Write the prompt — raw text, no fence, no surrounding prose — to a file under `${TMPDIR:-/tmp}`.
+3. Run `~/dotfiles/zsh/common/agent-handoff <that file>`.
+
+`agent-handoff` inherits the current provider (`AGENT_PROVIDER`, default Codex), accepts `--provider codex|claude`, and forces work Claude under `~/Work`. It starts a fresh native conversation in this directory with the briefing. Once the replacement's prompt hook confirms startup, it moves clients viewing the source pane and retires only that pane. Siblings survive.
+
+On timeout or startup failure, the source remains open. Report the failure and any replacement pane printed by the helper; do not blindly retry and create duplicates. A trust or login prompt may need the user in that replacement. Outside tmux, print the briefing in a fenced `text` block and copy it with `pbcopy` instead. After a successful handoff, do not run further commands.
+
+If the session genuinely has no continuation (one-off task, fully closed out), say so in one line and skip the handoff entirely.
 
 ## Output
 
 End with a tight summary:
 - Memories written/updated (filenames only)
 - Commits created (short SHA + subject line)
-- Handoff prompt (in a fenced block) — or "no handoff needed"
+- Handoff — the new session it starts, or "no handoff needed"
 - Anything skipped and why (e.g. "left WIP changes in `foo.ts` unstaged — incomplete")
