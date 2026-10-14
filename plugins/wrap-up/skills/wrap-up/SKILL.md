@@ -43,7 +43,7 @@ Now commit the session's code work.
 7. If a hook fails, fix the underlying issue and make a **new** commit — never `--amend`.
 8. Run `git status` after each commit to verify.
 
-**Do not push.** Stop after committing locally unless the user explicitly asks to push.
+**Push sensible finished work to Cole's own repos without asking.** Ask before force-pushing, rewriting history, or pushing to shared or work repos.
 
 ## Phase 3 — Hand off to a fresh session
 
