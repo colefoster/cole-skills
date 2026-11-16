@@ -71,7 +71,7 @@ Output a single response with these sections, in this order. Keep it skimmable �
 **Recommended next step** — default to *"write this up as a PRD"* via `/mp-write-a-prd` or `/auto-prd`. A PRD that names the pain points explicitly is how a step-back actually closes the loop — it forces the ideal shape into a durable artifact instead of evaporating after the conversation. Other valid recommendations:
 - A small spike to de-risk an unknown before committing to a direction
 - *"Keep going as-is"* — if the friction isn't worth a reshape yet. Always on the table; don't manufacture a refactor.
-- Stress-test first via `/mp-grill-me` or `/two-claudes` if the ideal shape is still uncertain
+- Stress-test first via `/mp-grill-me` if the ideal shape is still uncertain
 
 ### 6. Stop
 

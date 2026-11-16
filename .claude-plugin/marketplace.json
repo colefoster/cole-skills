@@ -36,12 +36,6 @@
       "version": "1.0.0"
     },
     {
-      "name": "two-claudes",
-      "source": "./plugins/two-claudes",
-      "description": "Stress-test a plan by grilling it with codebase access and sending each question to an independent expert agent for fresh perspective.",
-      "version": "1.0.0"
-    },
-    {
       "name": "wrap-up",
       "source": "./plugins/wrap-up",
       "description": "End-of-session wrap-up: save durable knowledge to memory, then commit the session's code changes in clean, scoped commits.",

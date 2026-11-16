@@ -11,7 +11,6 @@ A [Claude Code](https://claude.com/claude-code) plugin marketplace by [@colefost
 | [`kaomoji`](plugins/kaomoji) | Express yourself with kaomoji — Japanese-style text emoticons — for the rest of the session. |
 | [`step-back`](plugins/step-back) | Pause hands-on work and reassess an area from a higher level — ideal architecture vs. accrued friction. |
 | [`three-designs`](plugins/three-designs) | Spawn 3 parallel sub-agents to produce 3 radically different design solutions, each using a distinct mental model. |
-| [`two-claudes`](plugins/two-claudes) | Stress-test a plan by grilling it with codebase access and sending each question to an independent expert agent for fresh perspective. |
 | [`wrap-up`](plugins/wrap-up) | End-of-session wrap-up: save durable knowledge to memory, then commit the session's code changes in clean, scoped commits. |
 
 ## Install
